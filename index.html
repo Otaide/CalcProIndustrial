@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Fórmulas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2C3E50;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #E74C3C;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input[type="text"], input[type="file"] {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        button {
+            background-color: #3498DB;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980B9;
+        }
+
+        .table-controls {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .table-controls button {
+            background-color: #2ECC71;
+        }
+
+        .table-controls button:hover {
+            background-color: #27AE60;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #34495E;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="image.png" alt="Logo Rubberloss" class="logo">
+        <h1>Gerenciador de Fórmulas</h1>
+        <h3><strong>Atenção: Após editar a base de dados CSV, será gerado um download dessa nova versão. 
+            Coloque-o no mesmo diretório do software calculadora.py</strong></h3>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar..." />
+            <button onclick="searchTable()">Buscar</button>
+        </div>
+
+        <div style="text-align: center;">
+            <input type="file" id="fileInput" />
+            <button onclick="loadCSV()">Carregar CSV</button>
+            <button onclick="saveCSV()">Salvar CSV</button>
+        </div>
+        
+        <div class="table-controls">
+            <button onclick="addRow()">Adicionar Linha</button>
+            <button onclick="removeRow()">Remover Linha</button>
+            <button onclick="addColumn()">Adicionar Coluna</button>
+            <button onclick="removeColumn()">Remover Coluna</button>
+        </div>
+
+        <div class="table-container">
+            <table id="csvTable"></table>
+        </div>
+        
+        <footer>
+            <p>Desenvolvido por Otaide Silva, 2024 ©</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
