@@ -85,6 +85,12 @@ A Calculadora de Fórmulas é um aplicativo desktop desenvolvido em Python para 
 2. Clique no botão "Exportar"
 3. Escolha o local para salvar o arquivo Excel
 4. O arquivo será gerado com formatação profissional
+5. Vídeo:
+
+https://github.com/user-attachments/assets/3e0b6648-c771-40b3-a8bd-10b7b112ee6b
+
+
+     
 
 ## 6. Requisitos Técnicos
 - Python 3.x
