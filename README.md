@@ -87,7 +87,9 @@ A Calculadora de Fórmulas é um aplicativo desktop desenvolvido em Python para 
 4. O arquivo será gerado com formatação profissional
 5. Vídeo:
 
-https://github.com/user-attachments/assets/3e0b6648-c771-40b3-a8bd-10b7b112ee6b
+https://github.com/user-attachments/assets/0fee2066-3b16-4c27-a79d-2acf516a9eda
+
+
 
 
      
